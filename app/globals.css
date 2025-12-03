@@ -41,9 +41,6 @@
     --background-image-auth-light: url("/images/auth-light.png");
 
     --breakpoint-xs: 420px;
-
-    --font-inter: var(--font-inter);
-    --font-space-grotesk: var(--font-space-grotesk);
 }
 
 /*
@@ -62,6 +59,10 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentcolor);
     }
+}
+
+@utility font-spaceGrotesk {
+    font-family: var(--font-space-grotesk), system-ui, sans-serif;
 }
 
 @utility background-light850_dark100 {
