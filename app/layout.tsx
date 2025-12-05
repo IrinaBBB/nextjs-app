@@ -2,9 +2,9 @@ import React from 'react'
 
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import './globals.css'
 import ThemeProvider from '@/context/Theme'
 
+import './globals.css'
 
 const inter = Inter({
     variable: '--font-inter',
@@ -28,19 +28,17 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
+    children,
+}: Readonly<{
+    children: React.ReactNode
 }>) {
     return (
-        <html lang='en' suppressHydrationWarning>
-        <body
-            className={`${inter.className} ${spaceGrotesk.variable} antialiased`}
-        >
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-            {children}
-        </ThemeProvider>
-        </body>
+        <html lang="en" suppressHydrationWarning>
+            <body className={`${inter.className} ${spaceGrotesk.variable} antialiased`}>
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     )
 }
