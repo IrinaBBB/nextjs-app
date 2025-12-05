@@ -2,7 +2,7 @@ import React from 'react'
 
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
-import ThemeProvider from '@/context/Theme'
+import ThemeProvider from '@/context/ThemeProvider'
 
 import './globals.css'
 import Navbar from '@/components/navigation/navbar'
