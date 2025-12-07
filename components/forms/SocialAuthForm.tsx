@@ -4,13 +4,16 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { toast } from 'sonner'
+import ROUTES from '@/constants/routes'
+import { signIn } from 'next-auth/react'
 
 const SocialAuthForm = () => {
     const buttonClass =
         'background-dark400_light900 body-medium text-dark200_light800 rounded-2 min-h-12 flex-1 px-4 py-3.5'
+
     const handleSignIn = async (provider: 'github' | 'google') => {
         try {
-            throw new Error('Not implemented')
+            await signIn(provider, { callbackUrl: ROUTES.HOME, redirect: true })
         } catch (error) {
             console.log(error)
             toast.error('Sign-in failed', {
