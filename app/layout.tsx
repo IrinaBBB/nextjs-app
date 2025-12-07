@@ -5,6 +5,7 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import ThemeProvider from '@/context/ThemeProvider'
 
 import './globals.css'
+import { Toaster } from '@/components/ui/sonner'
 
 const inter = Inter({
     variable: '--font-inter',
@@ -38,6 +39,7 @@ export default function RootLayout({
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
+                <Toaster position="bottom-center" richColors />
             </body>
         </html>
     )
